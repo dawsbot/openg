@@ -23,10 +23,10 @@ $ npm install -g openm
 
 ```
 $ openm
-  //=>opens the npmjs module page for the current directory in browser'
+  //=>opens the npmjs module page for the current directory in browser
 
 $ openm chalk
-  //=>opens the npmjs module page for chalk in browser'
+  //=>opens the npmjs module page for chalk in browser
 
 ```
 
@@ -38,13 +38,13 @@ $ openm --help
 
   Usage  
     $ openm
-      //=>opens the npmjs module page for the current directory in browser'
+      //=>opens the npmjs module page for the current directory in browser
 
     $ openm <module name>
 
   Examples  
     $ openm express
-    //=>opens the npmjs module page for express in browser'
+    //=>opens the npmjs module page for express in browser
 ```
 
 <br>
