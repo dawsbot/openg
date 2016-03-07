@@ -16,8 +16,8 @@ test('package - basic url building', t => {
   t.is(openm('test_package'), 'https://npmjs.com/package/test_package');
 });
 
-test('cli - valid args', t => {
-  t.true(sh.exec('./cli.js', {silent: true}).code === 1);
+test('cli - valid and invalid args', t => {
+  t.true(sh.exec('./cli.js', {silent: true}).code === 0);
   t.true(sh.exec('./cli.js openm', {silent: true, wait: false}).code === 0);
   t.true(sh.exec('./cli.js package1 package2', {silent: true}).code === 1);
 });

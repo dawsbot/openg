@@ -22,6 +22,9 @@ $ npm install -g openm
 ## Usage
 
 ```
+$ openm
+  //=>opens the npmjs module page for the current directory in browser'
+
 $ openm chalk
   //=>opens the npmjs module page for chalk in browser'
 
@@ -34,6 +37,9 @@ More help
 $ openm --help
 
   Usage  
+    $ openm
+      //=>opens the npmjs module page for the current directory in browser'
+
     $ openm <module name>
 
   Examples  
