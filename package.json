@@ -1,0 +1,62 @@
+{
+  "name": "openm",
+  "version": "0.0.0",
+  "description": "Open an npmjs module page in your browser",
+  "license": "MIT",
+  "homepage": "https://github.com/dawsonbotsford/openm#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawsonbotsford/openm.git"
+  },
+  "author": {
+    "name": "Dawson Botsford",
+    "email": "DawsonBotsford@gmail.com",
+    "url": "dawsonbotsford.com"
+  },
+  "bugs": {
+    "url": "https://github.com/dawsonbotsford/openm/issues"
+  },
+  "bin": {
+    "openm": "cli.js"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "ava": "ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "npmjs",
+    "efficiency",
+    "cli-app",
+    "cli",
+    "lean",
+    "minimal",
+    "documented",
+    "tested",
+    "licensed",
+    "ava",
+    "dawson"
+  ],
+  "dependencies": {
+    "meow": "^3.7.0",
+    "opn": "^4.0.1",
+    "update-notifier": "^0.6.1"
+  },
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "xo": "^0.12.1",
+    "eslint-config-xo-space": "^0.8.0"
+  },
+  "xo": {
+    "space": true,
+    "eslintConfig": {
+      "extends": "xo-space"
+    }
+  }
+}
