@@ -16,4 +16,9 @@ const cli = meow([
 
 updateNotifier({pkg: cli.pkg}).notify();
 
+if (cli.input.length !== 1) {
+  console.error('Specify one npmjs package to open in browser');
+  console.log(cli.help);
+  process.exit(1);
+}
 opn(openm(cli.input[0] || 'openm'), {wait: false});
