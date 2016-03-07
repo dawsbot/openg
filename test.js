@@ -12,8 +12,8 @@ test('package - valid args', t => {
 });
 
 test('package - basic url building', t => {
-  t.is(openm('test-package'), 'https://npmjs.com/package/test-package');
-  t.is(openm('test_package'), 'https://npmjs.com/package/test_package');
+  t.is(openm('test-package'), 'https://www.npmjs.com/package/test-package');
+  t.is(openm('test_package'), 'https://www.npmjs.com/package/test_package');
 });
 
 test('cli - valid and invalid args', t => {

@@ -10,5 +10,5 @@ module.exports = function (packageName) {
     throw new Error(`Expected 1 arguments, got ${argLength}`);
   }
 
-  return `https://npmjs.com/package/${packageName}`;
+  return `https://www.npmjs.com/package/${packageName}`;
 };
