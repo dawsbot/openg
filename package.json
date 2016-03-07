@@ -46,12 +46,12 @@
   "dependencies": {
     "meow": "^3.7.0",
     "opn": "^4.0.1",
+    "shelljs": "^0.6.0",
     "update-notifier": "^0.6.1"
   },
   "devDependencies": {
     "ava": "^0.11.0",
     "eslint-config-xo-space": "^0.8.0",
-    "shelljs": "^0.6.0",
     "xo": "^0.12.1"
   },
   "xo": {

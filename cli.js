@@ -4,6 +4,7 @@ const meow = require('meow');
 const updateNotifier = require('update-notifier');
 const openm = require('./index.js');
 const opn = require('opn');
+const sh = require('shelljs');
 
 const cli = meow([
   'Usage',
@@ -16,9 +17,26 @@ const cli = meow([
 
 updateNotifier({pkg: cli.pkg}).notify();
 
-if (cli.input.length !== 1) {
-  console.error('Specify one npmjs package to open in browser');
+let packageName = cli.input[0];
+
+const throwErr = () => {
   console.log(cli.help);
   process.exit(1);
+};
+
+if (cli.input.length === 0) {
+  const revParse = sh.exec('git rev-parse --show-toplevel', {silent: true});
+  if (revParse.code === 0) {
+    const splitRevParse = revParse.stdout.split('/');
+    packageName = splitRevParse[splitRevParse.length - 1];
+  } else {
+    console.error('Specify one npmjs package to open in browser');
+    throwErr();
+  }
 }
-opn(openm(cli.input[0] || 'openm'), {wait: false});
+
+if (cli.input.length > 1) {
+  throwErr();
+}
+
+opn(openm(packageName), {wait: false});
