@@ -6,7 +6,11 @@
 
 > open an npmjs module page in your browser
 
+<br>
+
 ![demo](demo.gif)
+
+<br>
 
 # CLI
 
