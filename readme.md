@@ -41,6 +41,7 @@ $ openm --help
       //=>opens the npmjs module page for the current directory in browser
 
     $ openm <module name>
+      //=>opens the npmjs module page for <module name> in browser'
 
   Examples  
     $ openm express

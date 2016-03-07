@@ -8,11 +8,16 @@ const sh = require('shelljs');
 
 const cli = meow([
   'Usage',
+  '  $ openm',
+  '',
   '  $ openm <module name>',
   '',
   'Examples',
-  '  $ openm express',
-  '  //=>opens the npmjs module page in browser'
+  '$ openm',
+  '  //=>opens the npmjs module page for the current directory in browser',
+  '',
+  '$ openm express',
+  '  //=>opens the npmjs module page for express in browser'
 ]);
 
 updateNotifier({pkg: cli.pkg}).notify();
