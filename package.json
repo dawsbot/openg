@@ -1,6 +1,6 @@
 {
   "name": "openm",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Open an npmjs module page in your browser",
   "license": "MIT",
   "homepage": "https://github.com/dawsonbotsford/openm#readme",
