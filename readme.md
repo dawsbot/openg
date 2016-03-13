@@ -4,7 +4,7 @@
 [![npm download count](http://img.shields.io/npm/dm/openm.svg?style=flat)](http://npmjs.org/openm)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-> open an npmjs module page in your browser
+> open npmjs module pages in your browser
 
 <br>
 
@@ -23,11 +23,13 @@ $ npm install -g openm
 
 ```
 $ openm
-  //=>opens the npmjs module page for the current directory in browser
+//=> opens the npmjs module page for the current directory in browser
 
 $ openm chalk
-  //=>opens the npmjs module page for chalk in browser
+//=> opens the npmjs module page for chalk in browser
 
+$ openm inf sist openm
+//=> opens the npmjs module pages for inf, sist, and openm in browser
 ```
 
 <br>
@@ -38,14 +40,14 @@ $ openm --help
 
   Usage  
     $ openm
-      //=>opens the npmjs module page for the current directory in browser
+    //=> opens the npmjs module page for the current directory in browser
 
-    $ openm <module name>
-      //=>opens the npmjs module page for <module name> in browser'
+    $ openm [*<module name>]
+    //=> opens the npmjs module page for N-lengthed <module name> packages in browser'
 
   Examples  
     $ openm express
-    //=>opens the npmjs module page for express in browser
+    //=> opens the npmjs module page for express in browser
 ```
 
 <br>
@@ -66,7 +68,7 @@ npm install --save openm
 const openm = require('openm');
 
 openm('express');
-//=> 'https://npmjs.com/module/express'
+//=> 'https://www.npmjs.com/module/express'
 ```
 
 <br>
@@ -79,7 +81,9 @@ openm('express');
 
 Type: `string`
 
-Return the npmjs module page url as a string.
+#### returns
+
+Type: `string`
 
 <br>
 

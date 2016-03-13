@@ -1,7 +1,7 @@
 {
   "name": "openm",
   "version": "1.0.0",
-  "description": "Open an npmjs module page in your browser",
+  "description": "open npmjs module pages in your browser",
   "license": "MIT",
   "homepage": "https://github.com/dawsonbotsford/openm#readme",
   "repository": {
@@ -23,14 +23,20 @@
     "node": ">=0.12.0"
   },
   "scripts": {
-    "test": "xo && ava",
-    "ava": "ava"
+    "test": "xo && npm run ava",
+    "ava": "ava test/test-*.js"
   },
   "files": [
     "index.js",
     "cli.js"
   ],
   "keywords": [
+    "opn",
+    "open",
+    "browser",
+    "util",
+    "utils",
+    "utilities",
     "npmjs",
     "efficiency",
     "cli-app",
@@ -44,7 +50,9 @@
     "dawson"
   ],
   "dependencies": {
+    "chalk": "^1.1.1",
     "meow": "^3.7.0",
+    "npm-name": "^2.1.0",
     "opn": "^4.0.1",
     "shelljs": "^0.6.0",
     "update-notifier": "^0.6.1"
