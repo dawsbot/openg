@@ -1,14 +1,10 @@
-# openm
-[![npm version](https://img.shields.io/npm/v/openm.svg)](https://www.npmjs.com/package/openm)
-[![Build Status](https://travis-ci.org/dawsonbotsford/openm.svg?branch=master)](https://travis-ci.org/dawsonbotsford/openm)
-[![npm download count](http://img.shields.io/npm/dm/openm.svg?style=flat)](http://npmjs.org/openm)
+# openg
+[![npm version](https://img.shields.io/npm/v/openg.svg)](https://www.npmjs.com/package/openg)
+[![Build Status](https://travis-ci.org/dawsonbotsford/openg.svg?branch=master)](https://travis-ci.org/dawsonbotsford/openg)
+[![npm download count](http://img.shields.io/npm/dm/openg.svg?style=flat)](http://npmjs.org/openg)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-> open npmjs module pages in your browser
-
-<br>
-
-![demo](demo.gif)
+> open Github repo pages for npm modules in your browser
 
 <br>
 
@@ -16,74 +12,41 @@
 
 ## Install
 ```
-$ npm install -g openm
+$ npm install -g openg
 ```
+
+<br>
 
 ## Usage
 
 ```
-$ openm
-//=> opens the npmjs module page for the current directory in browser
+$ openg
+//=> opens the github repo page for the current directory in browser
 
-$ openm chalk
-//=> opens the npmjs module page for chalk in browser
+$ openg chalk
+//=> opens the github repo page for chalk in browser
 
-$ openm inf sist openm
-//=> opens the npmjs module pages for inf, sist, and openm in browser
+$ openg inf sist openg
+//=> opens the github repo pages for inf, sist, and openg in browser
 ```
 
 <br>
 
 More help
 ```
-$ openm --help
+$ openg --help
 
-  Usage  
-    $ openm
-    //=> opens the npmjs module page for the current directory in browser
+  Usage
+    $ openg
+    //=> opens the github repo page for the current directory in browser
 
-    $ openm [*<module name>]
-    //=> opens the npmjs module page for N-lengthed <module name> packages in browser'
+    $ openg [*<module name>]
+    //=> opens the github repo page for N-lengthed <module name> packages in browser'
 
-  Examples  
-    $ openm express
-    //=> opens the npmjs module page for express in browser
+  Examples
+    $ openg express
+    //=> opens the github repo page for express in browser
 ```
-
-<br>
-
----
-# Package
-
-## Install
-```
-npm install --save openm
-```
-
-<br>
-
-## Usage
-
-```js
-const openm = require('openm');
-
-openm('express');
-//=> 'https://www.npmjs.com/module/express'
-```
-
-<br>
-
-## API
-
-### openm(target)
-
-##### target
-
-Type: `string`
-
-#### returns
-
-Type: `string`
 
 <br>
 

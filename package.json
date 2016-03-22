@@ -1,12 +1,12 @@
 {
-  "name": "openm",
-  "version": "1.1.0",
-  "description": "open npmjs module pages in your browser",
+  "name": "openg",
+  "version": "1.0.0",
+  "description": "open Github repo pages for npm modules in your browser",
   "license": "MIT",
-  "homepage": "https://github.com/dawsonbotsford/openm#readme",
+  "homepage": "https://github.com/dawsonbotsford/openg#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dawsonbotsford/openm.git"
+    "url": "git+https://github.com/dawsonbotsford/openg.git"
   },
   "author": {
     "name": "Dawson Botsford",
@@ -14,17 +14,16 @@
     "url": "dawsonbotsford.com"
   },
   "bugs": {
-    "url": "https://github.com/dawsonbotsford/openm/issues"
+    "url": "https://github.com/dawsonbotsford/openg/issues"
   },
   "bin": {
-    "openm": "cli.js"
+    "openg": "cli.js"
   },
   "engines": {
     "node": ">=0.12.0"
   },
   "scripts": {
-    "test": "xo && npm run ava",
-    "ava": "ava test/test-*.js"
+    "test": "xo && ava"
   },
   "files": [
     "index.js",
@@ -37,7 +36,7 @@
     "util",
     "utils",
     "utilities",
-    "npmjs",
+    "github",
     "efficiency",
     "cli-app",
     "cli",
@@ -54,6 +53,7 @@
     "meow": "^3.7.0",
     "npm-name": "^2.1.0",
     "opn": "^4.0.1",
+    "package-json": "^2.3.1",
     "shelljs": "^0.6.0",
     "update-notifier": "^0.6.1"
   },
