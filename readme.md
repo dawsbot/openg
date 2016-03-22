@@ -50,6 +50,12 @@ $ openg --help
 
 <br>
 
+## Related
+* [openm](https://github.com/dawsonbotsford/openm)
+* [opent](https://github.com/dawsonbotsford/opent)
+
+<br>
+
 ## License
 
 MIT © [Dawson Botsford](http://dawsonbotsford.com)
