@@ -2,27 +2,27 @@
 'use strict';
 const meow = require('meow');
 const updateNotifier = require('update-notifier');
-const openm = require('./index.js');
 const opn = require('opn');
 const sh = require('shelljs');
 const npmName = require('npm-name');
 const chalk = require('chalk');
+const packageJson = require('package-json');
 
 const cli = meow([
   'Usage',
-  '  $ openm',
+  '  $ openg',
   '',
-  '  $ openm <module name>',
+  '  $ openg <module name>',
   '',
   'Examples',
-  '$ openm',
-  '//=> opens the npmjs module page for the current directory in browser',
+  '$ openg',
+  '//=> opens the github repo page for the current directory in browser',
   '',
-  '$ openm express',
-  '//=> opens the npmjs module page for express in browser',
+  '$ openg express',
+  '//=> opens the github repo page for express in browser',
   '',
-  '$ openm inf sist openm',
-  '//=>  opens the npmjs module pages for inf, sist, and openm in browser'
+  '$ openg inf sist openg',
+  '//=>  opens the github repo pages for inf, sist, and openg in browser'
 ]);
 
 updateNotifier({pkg: cli.pkg}).notify();
@@ -49,7 +49,9 @@ if (packages.length === 0) {
 packages.forEach((myPackage) => {
   npmName(myPackage).then(available => {
     if (available === false) {
-      opn(openm(myPackage), {wait: false});
+      packageJson(myPackage, 'latest').then(json => {
+        opn(json.homepage, {wait: false});
+      });
     } else {
       throwErr(`package ${myPackage} not found`);
     }
