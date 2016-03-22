@@ -50,7 +50,11 @@ packages.forEach((myPackage) => {
   npmName(myPackage).then(available => {
     if (available === false) {
       packageJson(myPackage, 'latest').then(json => {
-        opn(json.homepage, {wait: false});
+        if (json.homepage) {
+          opn(json.homepage, {wait: false});
+        } else {
+          throwErr(`homepage not found in package.json of module "${myPackage}"`);
+        }
       });
     } else {
       throwErr(`package ${myPackage} not found`);
