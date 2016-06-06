@@ -50,6 +50,15 @@ $ openg --help
 
 <br>
 
+## FAQ
+
+#### How is this different than [npm repo](https://docs.npmjs.com/cli/repo)?
+npm repo is an npm builtin which provides similar functionality to openg. Here are the differences (growing list):
+
+* `openg` supports multiple module openings, `npm repo` supports only one at a time.
+
+<br>
+
 ## Related
 * [openm](https://github.com/dawsonbotsford/openm)
 * [opent](https://github.com/dawsonbotsford/opent)
