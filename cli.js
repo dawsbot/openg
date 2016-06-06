@@ -47,6 +47,7 @@ if (packages.length === 0) {
 }
 
 packages.forEach((myPackage) => {
+  myPackage = myPackage.toLowerCase();
   npmName(myPackage).then(available => {
     if (available === false) {
       packageJson(myPackage, 'latest').then(json => {
