@@ -17,21 +17,15 @@
     "url": "https://github.com/dawsonbotsford/openg/issues"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.0.0"
   },
   "scripts": {
-    "build": "npm run babel && npm run minify",
-    "babel": "babel src/index.js --out-file dist/index.js",
-    "watch": "babel src/index.js --out-file dist/index.js --watch",
-    "minify": "uglifyjs dist/index.js -o dist/index.min.js",
-    "precommit": "npm test && npm run build",
     "test": "xo && ava"
   },
   "files": [
-    "dist/index.min.js"
+    "index.js"
   ],
   "keywords": [
-    "opn",
     "open",
     "browser",
     "util",
@@ -51,34 +45,15 @@
   ],
   "dependencies": {
     "npm-name": "^3.0.0",
-    "opn": "^4.0.2",
-    "package-json": "^2.3.2"
+    "open": "0.0.5",
+    "package-json": "^2.3.2",
+    "shelljs": "^0.7.0"
   },
   "devDependencies": {
     "ava": "^0.15.2",
-    "babel": "^5.0.0",
-    "babel-cli": "^6.10.1",
-    "babel-core": "^6.9.1",
-    "babel-eslint": "^6.0.5",
-    "babel-plugin-ava-throws-helper": "^0.1.0",
-    "babel-plugin-detective": "^1.0.2",
-    "babel-plugin-espower": "^2.2.0",
-    "babel-plugin-transform-runtime": "^6.9.0",
-    "babel-polyfill": "^6.9.1",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-stage-2": "^6.5.0",
-    "babel-register": "^6.9.0",
-    "babel-runtime": "^6.9.2",
-    "husky": "^0.11.4",
-    "uglify-js": "^2.6.2",
     "xo": "^0.14.0"
   },
   "xo": {
     "space": true
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
   }
 }
