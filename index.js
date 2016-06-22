@@ -1,12 +1,8 @@
 'use strict';
-require("babel-register")({
-  ignore: false
-});
-const opn = require('opn');
+const open = require('open');
 const shelljs = require('shelljs');
 const npmName = require('npm-name');
 const packageJson = require('package-json');
-require('babel-polyfill');
 
 module.exports = function () {
   let packages = Array.prototype.slice.call(arguments);
@@ -22,7 +18,6 @@ module.exports = function () {
   }
 
   return Promise.all(packages.map(myPackage => {
-  // return packages.map(myPackage => {
     myPackage = myPackage.toLowerCase();
     return npmName(myPackage)
       .then(available => {
@@ -32,7 +27,7 @@ module.exports = function () {
         } else {
           packageJson(myPackage, 'latest').then(json => {
             if (json.homepage) {
-              opn(json.homepage, {wait: false});
+              open(json.homepage);
               return myPackage;
             }
             throw new Error(`homepage not found in package.json of module "${myPackage}"`);
