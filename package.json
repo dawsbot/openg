@@ -1,59 +1,22 @@
 {
-  "name": "openg",
-  "version": "2.0.0",
-  "description": "open Github repo pages for npm modules in your browser",
-  "license": "MIT",
-  "homepage": "https://github.com/dawsonbotsford/openg#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dawsonbotsford/openg.git"
-  },
-  "author": {
-    "name": "Dawson Botsford",
-    "email": "DawsonBotsford@gmail.com",
-    "url": "dawsonbotsford.com"
-  },
-  "bugs": {
-    "url": "https://github.com/dawsonbotsford/openg/issues"
-  },
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "open",
-    "browser",
-    "util",
-    "utils",
-    "utilities",
-    "github",
-    "efficiency",
-    "cli-app",
-    "cli",
-    "lean",
-    "minimal",
-    "documented",
-    "tested",
-    "licensed",
-    "ava",
-    "dawson"
-  ],
-  "dependencies": {
-    "npm-name": "^3.0.0",
-    "open": "0.0.5",
-    "package-json": "^2.3.2",
-    "shelljs": "^0.7.0"
-  },
   "devDependencies": {
     "ava": "^0.15.2",
-    "xo": "^0.14.0"
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "glob": "^7.0.5",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^1.3.0",
+    "gulp-cli": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "husky": "^0.11.4",
+    "lerna": "2.0.0-beta.23",
+    "shelljs": "^0.7.0",
+    "xo": "^0.16.0"
   },
-  "xo": {
-    "space": true
+  "scripts": {
+    "test": "xo packages/src/** && ava packages/*/dist/test/**",
+    "precommit": "npm test"
   }
 }
