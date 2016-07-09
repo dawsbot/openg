@@ -4,7 +4,8 @@ const changed = require('gulp-changed');
 const babel = require('gulp-babel');
 const rename = require('gulp-rename');
 const ava = require('gulp-ava');
-const xo = require('gulp-xo');
+const eslint = require('gulp-eslint');
+const uglify = require('gulp-uglify');
 
 const LERNA = 'packages/*'
 
@@ -16,7 +17,7 @@ const packages = glob.sync(LERNA).map(function(packageDir) {
 });
 
 // build all packages
-gulp.task('build', packages.map(function(name){
+gulp.task('babel', packages.map(function(name){
   packages.forEach((name) => {
     gulp.task(`${name}-build`, () => {
       return gulp.src(`packages/${name}/src/**`, {base: process.cwd()})
@@ -30,6 +31,7 @@ gulp.task('build', packages.map(function(name){
         'stage-2'
         ]
       }))
+      uglify()
       .pipe(gulp.dest(''));
     });
   });
@@ -38,7 +40,7 @@ gulp.task('build', packages.map(function(name){
 
 
 
-gulp.task('avaTask', packages.map(function(name){
+gulp.task('ava', packages.map(function(name){
   packages.forEach((name) => {
     gulp.task(`${name}-ava`, () => {
       return gulp.src(`packages/${name}/src/test/test.js`)
@@ -49,14 +51,16 @@ gulp.task('avaTask', packages.map(function(name){
   return `${name}-ava`;
 }))
 
-gulp.task('xoTask', packages.map(function(name){
+gulp.task('lint', packages.map(function(name){
   packages.forEach((name) => {
-    gulp.task(`${name}-ava`, () => {
+    gulp.task(`${name}-eslint`, () => {
       return gulp.src(`packages/${name}/src/**`)
-        .pipe(xo())
+        .pipe(eslint())
+        .pipe(eslint.format())
     });
   });
-  return `${name}-ava`;
+  return `${name}-eslint`;
 }));
 
-gulp.task('test', ['avaTask', 'xoTask']);
+gulp.task('test', ['ava', 'lint']);
+gulp.task('build', ['babel']);

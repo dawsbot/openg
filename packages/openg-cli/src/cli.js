@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// eslint import/no-extraneous-dependencies:0
 
 'use strict';
 const meow = require('meow');
