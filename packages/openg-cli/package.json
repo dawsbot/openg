@@ -17,16 +17,16 @@
     "url": "https://github.com/dawsonbotsford/openg/issues"
   },
   "bin": {
-    "openg": "dist/cli.js"
+    "openg": "src/cli.js"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "xo src/** && ava dist/test/**"
+    "test": "xo && ava"
   },
   "files": [
-    "dist/cli.js"
+    "src/cli.js"
   ],
   "keywords": [
     "opn",
@@ -53,6 +53,7 @@
     "update-notifier": "^0.7.0"
   },
   "devDependencies": {
+    "ava": "^0.15.2",
     "xo": "^0.15.1"
   },
   "xo": {
