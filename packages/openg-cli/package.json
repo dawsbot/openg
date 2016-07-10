@@ -1,0 +1,62 @@
+{
+  "name": "openg-cli",
+  "version": "1.0.0",
+  "description": "open Github repo pages for npm modules in your browser",
+  "license": "MIT",
+  "homepage": "https://github.com/dawsonbotsford/openg-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawsonbotsford/openg.git"
+  },
+  "author": {
+    "name": "Dawson Botsford",
+    "email": "DawsonBotsford@gmail.com",
+    "url": "dawsonbotsford.com"
+  },
+  "bugs": {
+    "url": "https://github.com/dawsonbotsford/openg/issues"
+  },
+  "bin": {
+    "openg": "src/cli.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "src/cli.js"
+  ],
+  "keywords": [
+    "opn",
+    "open",
+    "browser",
+    "util",
+    "utils",
+    "utilities",
+    "github",
+    "efficiency",
+    "cli-app",
+    "cli",
+    "lean",
+    "minimal",
+    "documented",
+    "tested",
+    "licensed",
+    "ava",
+    "dawson"
+  ],
+  "dependencies": {
+    "meow": "^3.7.0",
+    "openg": "^2.0.2",
+    "update-notifier": "^0.7.0"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "xo": "^0.15.1"
+  },
+  "xo": {
+    "space": true
+  }
+}
