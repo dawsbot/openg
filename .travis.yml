@@ -1,4 +1,7 @@
 language: node_js
+install:
+  - npm install lerna
+  - ./node_modules/.bin/lerna bootstrap
 node_js:
   - '6'
   - '5'
