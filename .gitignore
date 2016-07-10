@@ -1,5 +1,6 @@
 .DS_Store
 test.html
+npm-debug.log*
 
 # Logs
 logs

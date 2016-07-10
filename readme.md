@@ -59,6 +59,16 @@ npm repo is an npm builtin which provides similar functionality to openg. Here a
 
 <br>
 
+## Contribute
+
+```js
+npm run install
+```
+
+Since this is a [lerna](https://github.com/lerna/lern://github.com/lerna/lerna) project, both `openg-cli` and `openg` are contained within the `packages/` folder.
+
+<br>
+
 ## Related
 * [openm](https://github.com/dawsonbotsford/openm)
 * [opent](https://github.com/dawsonbotsford/opent)
