@@ -1,10 +1,9 @@
 .DS_Store
 test.html
-npm-debug.log*
 
 # Logs
 logs
-*.log
+*.log*
 
 # Runtime data
 pids

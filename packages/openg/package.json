@@ -1,9 +1,9 @@
 {
   "name": "openg",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "open Github repo pages for npm modules in your browser",
   "license": "MIT",
-  "homepage": "https://github.com/dawsonbotsford/openg#readme",
+  "homepage": "https://github.com/dawsonbotsford/openg/blob/master/packages/openg/readme.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dawsonbotsford/openg.git"
