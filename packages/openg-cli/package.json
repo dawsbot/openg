@@ -49,7 +49,7 @@
   ],
   "dependencies": {
     "meow": "^3.7.0",
-    "openg": "^2.0.2",
+    "openg": "^2.0.3",
     "update-notifier": "^0.7.0"
   },
   "devDependencies": {
