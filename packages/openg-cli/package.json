@@ -1,9 +1,9 @@
 {
   "name": "openg-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "open Github repo pages for npm modules in your browser",
   "license": "MIT",
-  "homepage": "https://github.com/dawsonbotsford/openg-cli#readme",
+  "homepage": "https://github.com/dawsonbotsford/openg/blob/master/packages/openg-cli/readme.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dawsonbotsford/openg.git"
@@ -49,7 +49,7 @@
   ],
   "dependencies": {
     "meow": "^3.7.0",
-    "openg": "^2.0.3",
+    "openg": "^2.0.4",
     "update-notifier": "^0.7.0"
   },
   "devDependencies": {
