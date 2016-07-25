@@ -6,7 +6,7 @@ const npmName = require('npm-name');
 const packageJson = require('package-json');
 const arrify = require('arrify');
 
-module.exports = function (input) {
+module.exports = function (input, opts) {
   let packages = arrify(input);
   if (packages.length === 0) {
     // if it's a git repo
@@ -27,10 +27,23 @@ module.exports = function (input) {
         if (available) {
           throw new Error(`package ${myPackage} not found`);
         } else {
-          packageJson(myPackage, 'latest').then(json => {
+          return packageJson(myPackage, 'latest').then(json => {
+            // if issues flag passed in
+            if (opts && opts.issues) {
+              if (json && json.bugs && json.bugs.url) {
+                if (!opts.dryRun) {
+                  open(json.bugs.url);
+                }
+                return json.bugs.url;
+              }
+              throw new Error(`issue flag identified, but no "bugs" attribute found in package.json of ${myPackage}`);
+            }
+            // no issues flags passed in
             if (json.homepage) {
-              open(json.homepage);
-              return myPackage;
+              if (!opts.dryRun) {
+                open(json.homepage);
+              }
+              return json.homepage;
             }
             throw new Error(`homepage not found in package.json of module "${myPackage}"`);
           });

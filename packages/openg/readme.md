@@ -4,7 +4,7 @@
 [![npm download count](http://img.shields.io/npm/dm/openg.svg?style=flat)](http://npmjs.org/openg)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-> open Github repo pages for npm modules in your browser 
+> open Github repo pages for npm modules in your browser
 
 <br>
 
@@ -22,21 +22,21 @@ npm install --save openg
 const openg = require('openg');
 
 openg('hackathons');
-//=> returns a promise that opens the github repo page for the current directory in browser
+//=> returns a promise that opens the github page for the current directory in-browser
 
+openg('express');
+//=> returns a promise that opens the github page for express in-browser
 
-openg(express);
-//=> returns a promise that opens the github repo page for express in browser
-
-
-openg([inf, sist, openg]);
-//=>  returns a promise that opens the github repo pages for inf, sist, and openg in browser
+openg(['inf', 'sist', 'openg'], {
+  issues: true
+});
+//=>  returns a promise that opens the github issues pages for all in-browser
 ```
 <br>
 
 ## API
 
-### openg(target)
+### openg(target, [opts])
 
 <br>
 
@@ -44,11 +44,43 @@ openg([inf, sist, openg]);
 
 Type: `string` | `array`
 
+npm modules name(s) you want to open in your browser
+
+<br>
+
+#### opts
+
+Type: *optional* `object`
+
+Pass these in to modify the behavior of `openg`
+
+##### issues: true
+
+Open the GitHub issues page for specified repo(s)
+
+##### dryRun: true
+
+Return the url's that would be opened and do **not** open them in-browser
+
+Example usage:
+```js
+openg('openg', {
+  issues: true,
+  dryRun: true
+}).then(resp => {
+  console.log(resp);
+});
+
+//=> ['https://github.com/dawsonbotsford/openg/issues']
+```
+
 <br>
 
 #### returns
 
 Type: `promise`
+
+Array of expected url value(s)
 
 <br>
 
