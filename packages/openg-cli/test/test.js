@@ -1,12 +1,15 @@
 import test from 'ava';
 
 const cliLocation = '../src/cli.js';
-const sh = require('shelljs');
+const shelljs = require('shelljs');
 
-test('cli - valid and invalid args', t => {
-  t.true(sh.exec(cliLocation).code === 0);
-  t.true(sh.exec(`${cliLocation} inf`, {silent: true, wait: false}).code === 0);
-  t.true(sh.exec(`${cliLocation} Inf`, {silent: true, wait: false}).code === 0);
-  t.true(sh.exec(`${cliLocation} inf openm`, {silent: true}).code === 0);
-  t.true(sh.exec(`${cliLocation} thispackagenameisnotarealname0981234`, {silent: true}).code === 1);
+test('cli - invalid args', t => {
+  t.true(shelljs.exec(`${cliLocation} thispackagenameisnotarealname0981234 --dryRun`, {silent: true}).code === 1);
+});
+
+test('cli - valid args', t => {
+  t.true(shelljs.exec(`${cliLocation} --dryRun`).code === 0);
+  t.true(shelljs.exec(`${cliLocation} inf --dryRun`, {silent: true, wait: false}).code === 0);
+  t.true(shelljs.exec(`${cliLocation} Inf --dryRun`, {silent: true, wait: false}).code === 0);
+  t.true(shelljs.exec(`${cliLocation} inf openm --dryRun`, {silent: true}).code === 0);
 });
