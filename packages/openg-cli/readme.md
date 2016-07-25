@@ -1,10 +1,10 @@
-# openg
+# openg-cli
 [![npm version](https://img.shields.io/npm/v/openg.svg)](https://www.npmjs.com/package/openg)
 [![Build Status](https://travis-ci.org/dawsonbotsford/openg.svg?branch=master)](https://travis-ci.org/dawsonbotsford/openg)
-[![npm download count](http://img.shields.io/npm/dm/openg.svg?style=flat)](http://npmjs.org/openg)
+[![npm download count](http://img.shields.io/npm/dm/openg.svg?style=flat)](http://npmjs.org/openg-cli)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-> open Github repo pages for npm modules in your browser
+> cli to open Github repos for npm modules in-browser
 
 <br>
 
@@ -19,43 +19,41 @@ $ npm install -g openg
 
 ## Usage
 
-```
+```sh
 $ openg
-//=> opens the github repo page for the current directory in browser
+# opens the github repo page for the current directory in browser
 
 $ openg chalk
-//=> opens the github repo page for chalk in browser
+# opens the github repo page for chalk in browser
 
-$ openg inf sist openg
-//=> opens the github repo pages for inf, sist, and openg in browser
+$ openg inf sist openg --issues
+# opens the github issues pages for inf, sist, and openg in browser
 ```
 
 <br>
 
 More help
-```
+```sh
 $ openg --help
-
   Usage
-    $ openg
-    //=> opens the github repo page for the current directory in browser
+    $ openg [<options>]
 
-    $ openg [*<module name>]
-    //=> opens the github repo page for N-lengthed <module name> packages in browser'
+    $ openg <module name(s)> [<options>]
 
   Examples
+    $ openg
+    # opens the github repo page for the current directory in browser
+
     $ openg express
-    //=> opens the github repo page for express in browser
+    # opens the github repo page for express in browser
+
+    $ openg inf sist openg --issues
+    #  opens the github issues pages for inf, sist, and openg in browser`
 ```
 
 <br>
 
-## FAQ
-
-#### How is this different than [npm repo](https://docs.npmjs.com/cli/repo)?
-npm repo is an npm builtin which provides similar functionality to openg. Here are the differences (growing list):
-
-* `openg` supports multiple module openings, `npm repo` supports only one at a time.
+## [FAQ](https://github.com/dawsonbotsford/openg#faq)
 
 <br>
 

@@ -2,7 +2,11 @@
 [![Build Status](https://travis-ci.org/dawsonbotsford/openg.svg?branch=master)](https://travis-ci.org/dawsonbotsford/openg)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-> open Github repo pages for npm modules in your browser
+> open Github repo pages for npm modules in-browser
+
+<br>
+
+![demo gif](media/demo.gif)
 
 <br>
 
@@ -19,33 +23,37 @@ If you'd rather have the API, [click here](/packages/openg)
 
 ## Usage
 
-```
+```sh
 $ openg
-//=> opens the github repo page for the current directory in browser
+# opens the github repo page for the current directory in browser
 
 $ openg chalk
-//=> opens the github repo page for chalk in browser
+# opens the github repo page for chalk in browser
 
-$ openg inf sist openg
-//=> opens the github repo pages for inf, sist, and openg in browser
+$ openg inf sist openg --issues
+# opens the github issues pages for all in browser
 ```
 
 <br>
 
 More help
-```
+```sh
 $ openg --help
 
   Usage
-    $ openg
-    //=> opens the github repo page for the current directory in browser
+    $ openg [<options>]
 
-    $ openg [*<module name>]
-    //=> opens the github repo page for N-lengthed <module name> packages in browser'
+    $ openg <module name(s)> [<options>]
 
   Examples
+    $ openg
+    # opens the github repo page for the current directory in browser
+
     $ openg express
-    //=> opens the github repo page for express in browser
+    # opens the github repo page for express in browser
+
+    $ openg inf sist openg --issues
+    #  opens the github issues pages for inf, sist, and openg in browser`
 ```
 
 <br>
@@ -56,6 +64,7 @@ $ openg --help
 npm repo is an npm builtin which provides similar functionality to openg. Here are the differences (growing list):
 
 * `openg` supports multiple module openings, `npm repo` supports only one at a time.
+* `opts` object allows you to open the issues page(s)
 
 <br>
 
