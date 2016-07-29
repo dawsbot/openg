@@ -3,7 +3,7 @@
     "lerna": "^2.0.0-beta.24"
   },
   "scripts": {
-    "test": "lerna run test",
+    "test": "for d in packages/*; do cd $d; npm test; cd -; done",
     "install": "./node_modules/.bin/lerna bootstrap"
   }
 }
