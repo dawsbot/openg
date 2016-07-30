@@ -31,6 +31,9 @@ module.exports = function (input, opts) {
             // if issues flag passed in
             if (opts && opts.issues) {
               if (json && json.bugs && json.bugs.url) {
+                if (opts.verbose) {
+                  console.log(json.bugs.url);
+                }
                 if (!opts.dryRun) {
                   open(json.bugs.url);
                 }
@@ -40,6 +43,9 @@ module.exports = function (input, opts) {
             }
             // no issues flags passed in
             if (json.homepage) {
+              if (opts.verbose) {
+                console.log(json.homepage);
+              }
               if (!opts.dryRun) {
                 open(json.homepage);
               }

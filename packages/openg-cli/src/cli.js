@@ -5,22 +5,32 @@ const meow = require('meow');
 const updateNotifier = require('update-notifier');
 const openg = require('openg');
 
-const cli = meow([
-  `Usage
-     $ openg [<options>]
+const cli = meow(`
+Usage
+  $ openg [<options>]
 
-     $ openg <module name(s)> [<options>]
+  $ openg <module name(s)> [<options>]
 
-  Examples
-    $ openg
-    # opens the github repo page for the current directory in browser
+Options
+  -i, --issues  Open the issue page for specified modules
+  -d, --dryRun  List what links would be opened instead of opening
 
-    $ openg express
-    # opens the github repo page for express in browser
+Examples
+  $ openg
+  # opens the github repo page for the current directory in browser
 
-    $ openg inf sist openg --issues
-    #  opens the github issues pages for inf, sist, and openg in browser`
-]);
+  $ openg express
+  # opens the github repo page for express in browser
+
+  $ openg inf sist openg --issues
+  #  opens the github issues pages for inf, sist, and openg in browser`,
+  {
+    alias: {
+      i: 'issues',
+      d: 'dryRun'
+    }
+  }
+);
 
 updateNotifier({pkg: cli.pkg}).notify();
 
