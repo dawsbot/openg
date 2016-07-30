@@ -45,6 +45,10 @@ $ openg --help
 
     $ openg <module name(s)> [<options>]
 
+  Options
+    -i, --issues  Open the issue page for specified modules
+    -d, --dryRun  List what links would be opened instead of opening
+
   Examples
     $ openg
     # opens the github repo page for the current directory in browser
@@ -53,7 +57,7 @@ $ openg --help
     # opens the github repo page for express in browser
 
     $ openg inf sist openg --issues
-    #  opens the github issues pages for inf, sist, and openg in browser`
+    #  opens the github issues pages for inf, sist, and openg in browser`,
 ```
 
 <br>
@@ -61,10 +65,11 @@ $ openg --help
 ## FAQ
 
 #### How is this different than [npm repo](https://docs.npmjs.com/cli/repo)?
-npm repo is an npm builtin which provides similar functionality to openg. Here are the differences (growing list):
 
+npm repo is an npm built-in. Here are the differences:
+
+* `opts` allows you to open issues page(s)
 * `openg` supports multiple module openings, `npm repo` supports only one at a time.
-* `opts` object allows you to open the issues page(s)
 
 <br>
 
@@ -79,6 +84,7 @@ Since this is a [lerna](https://github.com/lerna/lern://github.com/lerna/lerna) 
 <br>
 
 ## Related
+
 * [openm](https://github.com/dawsonbotsford/openm)
 * [opent](https://github.com/dawsonbotsford/opent)
 
