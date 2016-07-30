@@ -1,7 +1,7 @@
 language: node_js
-before_script:
+install:
+  - npm install lerna
   - npm run install
 node_js:
   - '6'
   - '5'
-  - '4'
