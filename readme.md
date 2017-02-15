@@ -1,5 +1,5 @@
 # openg
-[![Build Status](https://travis-ci.org/dawsonbotsford/openg.svg?branch=master)](https://travis-ci.org/dawsonbotsford/openg)
+[![Build Status](https://travis-ci.org/dawsbot/openg.svg?branch=master)](https://travis-ci.org/dawsbot/openg)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 > open Github repo pages for npm modules in-browser
@@ -85,8 +85,8 @@ Since this is a [lerna](https://github.com/lerna/lern://github.com/lerna/lerna) 
 
 ## Related
 
-* [openm](https://github.com/dawsonbotsford/openm)
-* [opent](https://github.com/dawsonbotsford/opent)
+* [openm](https://github.com/dawsbot/openm)
+* [opent](https://github.com/dawsbot/opent)
 
 <br>
 
