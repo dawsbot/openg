@@ -1,7 +1,7 @@
 // eslint import/no-extraneous-dependencies:0
 'use strict';
+const {execSync} = require('child_process');
 const open = require('open');
-const shelljs = require('shelljs');
 const npmName = require('npm-name');
 const packageJson = require('package-json');
 const arrify = require('arrify');
@@ -9,14 +9,14 @@ const arrify = require('arrify');
 module.exports = function (input, opts) {
   let packages = arrify(input);
   if (packages.length === 0) {
-    // if it's a git repo
-    const revParse = shelljs.exec('git rev-parse --show-toplevel', {silent: true});
-    if (revParse.code === 0) {
-      const splitRevParse = revParse.stdout.split('/');
-      packages = [splitRevParse[splitRevParse.length - 1].trim()];
-    } else {
+    let topLevel;
+    try {
+      topLevel = execSync('git rev-parse --show-toplevel', {stdio: ['ignore', 'pipe', 'ignore']}).toString();
+    } catch (err) {
       throw new Error('Specify one or more npmjs arguments, none found');
     }
+    const splitRevParse = topLevel.split('/');
+    packages = [splitRevParse[splitRevParse.length - 1].trim()];
   }
 
   return Promise.all(packages.map(myPackage => {
