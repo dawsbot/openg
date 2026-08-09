@@ -1,6 +1,6 @@
 {
   "name": "openg",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "open Github repo pages for npm modules in your browser",
   "license": "MIT",
   "homepage": "https://github.com/dawsonbotsford/openg/blob/master/packages/openg/readme.md",
@@ -46,6 +46,7 @@
   ],
   "dependencies": {
     "arrify": "^2.0.1",
+    "hosted-git-info": "^8.1.0",
     "open": "^8.4.2",
     "package-json": "^7.0.0"
   },
@@ -53,6 +54,9 @@
     "ava": "^6.4.1",
     "nock": "^14.0.10",
     "xo": "^0.60.0"
+  },
+  "ava": {
+    "workerThreads": false
   },
   "xo": {
     "space": true,

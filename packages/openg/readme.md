@@ -48,6 +48,17 @@ Type: `string` | `array`
 
 npm modules name(s) you want to open in your browser
 
+Urls come from the module's `homepage` (or `bugs.url` with `issues: true`). When
+those are missing — which is common — they are inferred from the `repository`
+field instead, including the subdirectory for packages published out of a
+monorepo. Every form npm allows is understood: `"user/repo"` shorthand, a bare
+url, or an object using `git:`, `git+ssh:`, or `https:`.
+
+Called with no target, `openg` answers for the repo you're standing in, reading
+the local checkout rather than the registry: the local `package.json` first, then
+the git remote. Unpublished and private repos work, and no network request is
+made unless neither of those resolves.
+
 <br>
 
 #### opts
