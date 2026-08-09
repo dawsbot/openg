@@ -1,6 +1,6 @@
 {
   "name": "openg",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "open Github repo pages for npm modules in your browser",
   "license": "MIT",
   "homepage": "https://github.com/dawsonbotsford/openg/blob/master/packages/openg/readme.md",
@@ -17,7 +17,7 @@
     "url": "https://github.com/dawsonbotsford/openg/issues"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=20"
   },
   "scripts": {
     "test": "xo && ava"
@@ -45,16 +45,19 @@
     "dawson"
   ],
   "dependencies": {
-    "arrify": "^1.0.1",
-    "npm-name": "^3.2.0",
-    "open": "^0.0.5",
-    "package-json": "^2.4.0"
+    "arrify": "^2.0.1",
+    "open": "^8.4.2",
+    "package-json": "^7.0.0"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
-    "xo": "^0.14.0"
+    "ava": "^6.4.1",
+    "nock": "^14.0.10",
+    "xo": "^0.60.0"
   },
   "xo": {
-    "space": true
+    "space": true,
+    "rules": {
+      "unicorn/prefer-module": "off"
+    }
   }
 }

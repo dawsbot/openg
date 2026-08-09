@@ -1,9 +1,13 @@
 {
-  "devDependencies": {
-    "lerna": "2.0.0-beta.34"
+  "name": "openg-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
   },
   "scripts": {
-    "test": "lerna run test",
-    "install": "./node_modules/.bin/lerna bootstrap"
+    "test": "npm test --workspaces"
   }
 }

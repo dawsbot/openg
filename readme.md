@@ -1,5 +1,5 @@
 # openg
-[![Build Status](https://travis-ci.org/dawsbot/openg.svg?branch=master)](https://travis-ci.org/dawsbot/openg)
+[![CI](https://github.com/dawsbot/openg/actions/workflows/ci.yml/badge.svg)](https://github.com/dawsbot/openg/actions/workflows/ci.yml)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 > open Github repo pages for npm modules in-browser
@@ -46,8 +46,9 @@ $ openg --help
     $ openg <module name(s)> [<options>]
 
   Options
-    -i, --issues  Open the issue page for specified modules
-    -d, --dryRun  List what links would be opened instead of opening
+    -i, --issues   Open the issue page for specified modules
+    -d, --dryRun   List what links would be opened instead of opening
+    -v, --verbose  Print each link as it is opened
 
   Examples
     $ openg
@@ -57,7 +58,7 @@ $ openg --help
     # opens the github repo page for express in browser
 
     $ openg inf sist openg --issues
-    #  opens the github issues pages for inf, sist, and openg in browser`,
+    #  opens the github issues pages for inf, sist, and openg in browser
 ```
 
 <br>
@@ -79,7 +80,7 @@ npm repo is an npm built-in. Here are the differences:
 npm run install
 ```
 
-Since this is a [lerna](https://github.com/lerna/lern://github.com/lerna/lerna) project, both `openg-cli` and `openg` are contained within the `packages/` folder.
+Since this is an [npm workspaces](https://docs.npmjs.com/cli/using-npm/workspaces) monorepo, both `openg-cli` and `openg` are contained within the `packages/` folder.
 
 <br>
 

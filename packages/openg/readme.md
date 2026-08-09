@@ -1,6 +1,6 @@
 # openg
 [![npm version](https://img.shields.io/npm/v/openg.svg)](https://www.npmjs.com/package/openg)
-[![Build Status](https://travis-ci.org/dawsonbotsford/openg.svg?branch=master)](https://travis-ci.org/dawsonbotsford/openg)
+[![CI](https://github.com/dawsbot/openg/actions/workflows/ci.yml/badge.svg)](https://github.com/dawsbot/openg/actions/workflows/ci.yml)
 [![npm download count](http://img.shields.io/npm/dm/openg.svg?style=flat)](http://npmjs.org/openg)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
@@ -11,8 +11,10 @@
 ## Install
 
 ```
-npm install --save openg
+npm install openg
 ```
+
+Requires Node.js 20 or newer.
 
 <br>
 
@@ -21,7 +23,7 @@ npm install --save openg
 ```js
 const openg = require('openg');
 
-openg('hackathons');
+openg();
 //=> returns a promise that opens the github page for the current directory in-browser
 
 openg('express');
@@ -74,13 +76,22 @@ openg('openg', {
 //=> ['https://github.com/dawsonbotsford/openg/issues']
 ```
 
+##### verbose: true
+
+Print each url to stdout as it is resolved
+
 <br>
 
 #### returns
 
 Type: `promise`
 
-Array of expected url value(s)
+Resolves with an array of url value(s), in the same order as `target`.
+
+Every module is attempted, so one bad name does not stop the others from
+opening. If any of them fail, the promise rejects with an
+[`AggregateError`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AggregateError)
+whose `.errors` holds one error per failed module.
 
 <br>
 
